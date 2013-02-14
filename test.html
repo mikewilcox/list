@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>The List</title>
+	<link href='./resources/app.css' rel='stylesheet' />
+	<script>
+		dojoConfig = {
+			async:1,
+			isDebug:1,
+			packages:[
+				{name:'app', location:'../list/app'},
+				{name:'mvc', location:'../dx-mvc'}
+			]
+		}
+	</script>
+	<script src='../dojo/dojo.js'></script>
+	
+</head>
+<body>
+    <div data-view='app/view/ListBar'>
+		<div data-view='app/ui/Button' id='btnCat'>Category</div>
+		<div data-view='app/ui/Button' id='btnLoc'>Location</div>
+		<div data-view='app/ui/Button' id='btnAsc'>Ascending</div>
+		<div data-view='app/ui/Button' id='btnDec'>Descending</div>
+		<div data-view='app/ui/Button' id='btnAdd' class='thoughtbot'>Add</div>
+		<div data-view='app/ui/Button' id='btnSave' class='thoughtbot'>Save</div>
+		<div data-view='app/ui/Button' id='btnGet' class='thoughtbot'>Get</div>
+		<div data-view='app/ui/Button' id='btnGetAll' class='thoughtbot'>Get All</div>
+	</div>
+	<div data-view='app/view/List' id='list'>
+	</div>
+	<script>
+		require(['app/main']);
+	</script>
+</body>
+</html>
