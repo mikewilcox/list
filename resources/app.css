@@ -1,0 +1,229 @@
+@import url(../../dojo/resources/dojo.css);
+html, body{
+	font-family: sans-serif;
+	width: 320px;
+}
+
+
+
+/* 
+ * GROUPS
+ * 
+*******************************************************************************/
+
+
+.group{
+	background: #eee;
+}
+
+.group .titlebar{
+	cursor: pointer;
+	padding: 3px;
+}
+.group .title{
+	font-style: italic;
+	font-size: 0.8em;
+	color: #999;
+	padding: 3px;
+}
+.group .container{
+	background: #fff;
+}
+.closeIcon,
+.openIcon{
+	font-size: 0.6em;
+	margin-left: 3px;
+	color: #666;
+}
+.closeIcon{
+	margin-right: 1px;
+}
+.group .closeIcon{ display: none; }
+.group.closed .closeIcon{ display: inline; }
+.group.closed .openIcon{ display: none; }
+
+
+/* 
+ * LIST ITEMS
+ * 
+*******************************************************************************/
+
+.list{
+	position: relative;
+	width: 200px;
+	border: 2px solid #ccc;
+	margin-top: 45px;
+}
+.listBar{
+	position: fixed;
+	z-index: 100;
+	top:0;
+	left: 0;
+	width: 100%;
+	background: #666;
+	color: #fff;
+	text-align: center;
+	padding: 3px;
+}
+.item{
+	padding: 3px;
+	margin: 2px;
+	border-bottom: 1px solid #ccc;
+	background: #fff;
+	font-size: 0.9em;
+}
+.last .item{
+	border: 0;
+}
+.container{
+	border: 1px solid #ccc;
+	background: #fff;
+}
+
+
+/* 
+ * BUTTONS
+ * 
+*******************************************************************************/
+
+.button{
+	font: bold 12px/1 "helvetica neue", helvetica, arial, sans-serif;
+	padding: 9px 9px;
+}
+.button .icon{
+	display: inline;
+	width: 16px;
+	height: 16px;
+	padding: 8px;
+	margin-right: 6px;
+	background: #ff0000;
+}
+.button .icon.ok{
+	background: url(./img/button_ok.png) no-repeat center;
+}
+.button .icon.cancel{
+	background: url(./img/button_cancel.png) no-repeat center;
+}
+.button .icon.edit{
+	background: url(./img/edit.png) no-repeat center;
+}
+.button.disabled,
+.button.disabled:hover,
+.button.disabled:active,
+.button.busy,
+.button.busy:hover,
+.button.busy:active{
+	background: #ccc;
+	color: #666;
+	cursor: default;
+	-webkit-box-shadow: none;
+    box-shadow: none;
+	text-shadow: none;
+	border-color: #999;
+}
+.button.disabled .icon{
+	opacity: .2;
+}
+.button.busy .icon{
+	opacity:1;
+	background: url(./img/ani_16.gif) no-repeat center;
+}
+
+
+/* nobody (as in, "no body", or icon-only button)
+*******************************************************************************/
+.nobody{
+	background: none;
+	border: none;
+	cursor: pointer;
+	border-radius: 5px;
+}
+.nobody:hover{
+	background: rgba(0,0,0,.2);
+}
+.nobody:active{
+	background: rgba(0,0,0,.4);
+}
+.button.nobody .icon{
+	margin: 0;
+}
+
+
+/* shiny blue (inspired by rdio iphone interface)
+*******************************************************************************/
+.shiny-blue {
+	background-color: #759ae9;
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #759ae9), color-stop(50%, #376fe0), color-stop(50%, #1a5ad9), color-stop(100%, #2463de));
+	background-image: -webkit-linear-gradient(top, #759ae9 0%, #376fe0 50%, #1a5ad9 50%, #2463de 100%);
+	background-image: -moz-linear-gradient(top, #759ae9 0%, #376fe0 50%, #1a5ad9 50%, #2463de 100%);
+	background-image: -ms-linear-gradient(top, #759ae9 0%, #376fe0 50%, #1a5ad9 50%, #2463de 100%);
+	background-image: -o-linear-gradient(top, #759ae9 0%, #376fe0 50%, #1a5ad9 50%, #2463de 100%);
+	background-image: linear-gradient(top, #759ae9 0%, #376fe0 50%, #1a5ad9 50%, #2463de 100%);
+	border-top: 1px solid #1f58cc;
+	border-right: 1px solid #1b4db3;
+	border-bottom: 1px solid #174299;
+	border-left: 1px solid #1b4db3;
+	border-radius: 4px;
+	-webkit-box-shadow: inset 0 0 2px 0 rgba(57, 140, 255, 0.8);
+	box-shadow: inset 0 0 2px 0 rgba(57, 140, 255, 0.8);
+	color: #fff;
+	text-shadow: 0 -1px 1px #1a5ad9;
+}
+.shiny-blue:hover {
+    background-color: #5d89e8;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #5d89e8), color-stop(50%, #2261e0), color-stop(50%, #044bd9), color-stop(100%, #0d53de));
+    background-image: -webkit-linear-gradient(top, #5d89e8 0%, #2261e0 50%, #044bd9 50%, #0d53de 100%);
+    background-image: -moz-linear-gradient(top, #5d89e8 0%, #2261e0 50%, #044bd9 50%, #0d53de 100%);
+    background-image: -ms-linear-gradient(top, #5d89e8 0%, #2261e0 50%, #044bd9 50%, #0d53de 100%);
+    background-image: -o-linear-gradient(top, #5d89e8 0%, #2261e0 50%, #044bd9 50%, #0d53de 100%);
+    background-image: linear-gradient(top, #5d89e8 0%, #2261e0 50%, #044bd9 50%, #0d53de 100%);
+    cursor: pointer;
+}
+.shiny-blue:active {
+    border-top: 1px solid #1b4db3;
+    border-right: 1px solid #174299;
+    border-bottom: 1px solid #133780;
+    border-left: 1px solid #174299;
+    -webkit-box-shadow: inset 0 0 5px 2px #1a47a0, 0 1px 0 #eeeeee;
+    box-shadow: inset 0 0 5px 2px #1a47a0, 0 1px 0 #eeeeee;
+}
+	
+/* thoughtbot (inspired by thoughtbot.com)
+*******************************************************************************/
+.thoughtbot {
+	background-color: #ee432e;
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ee432e), color-stop(50%, #c63929), color-stop(50%, #b51700), color-stop(100%, #891100));
+	background-image: -webkit-linear-gradient(top, #ee432e 0%, #c63929 50%, #b51700 50%, #891100 100%);
+	background-image: -moz-linear-gradient(top, #ee432e 0%, #c63929 50%, #b51700 50%, #891100 100%);
+	background-image: -ms-linear-gradient(top, #ee432e 0%, #c63929 50%, #b51700 50%, #891100 100%);
+	background-image: -o-linear-gradient(top, #ee432e 0%, #c63929 50%, #b51700 50%, #891100 100%);
+	background-image: linear-gradient(top, #ee432e 0%, #c63929 50%, #b51700 50%, #891100 100%);
+	border: 1px solid #951100;
+	border-radius: 5px;
+	-webkit-box-shadow: inset 0px 0px 0px 1px rgba(255, 115, 100, 0.4), 0 1px 3px #333333;
+	box-shadow: inset 0px 0px 0px 1px rgba(255, 115, 100, 0.4), 0 1px 3px #333333;
+	color: #fff;
+	text-align: center;
+	text-shadow: 0px -1px 1px rgba(0, 0, 0, 0.8);
+}
+  .thoughtbot:hover {
+    background-color: #f37873;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f37873), color-stop(50%, #db504d), color-stop(50%, #cb0500), color-stop(100%, #a20601));
+    background-image: -webkit-linear-gradient(top, #f37873 0%, #db504d 50%, #cb0500 50%, #a20601 100%);
+    background-image: -moz-linear-gradient(top, #f37873 0%, #db504d 50%, #cb0500 50%, #a20601 100%);
+    background-image: -ms-linear-gradient(top, #f37873 0%, #db504d 50%, #cb0500 50%, #a20601 100%);
+    background-image: -o-linear-gradient(top, #f37873 0%, #db504d 50%, #cb0500 50%, #a20601 100%);
+    background-image: linear-gradient(top, #f37873 0%, #db504d 50%, #cb0500 50%, #a20601 100%);
+    cursor: pointer;
+}
+.thoughtbot:active {
+    background-color: #d43c28;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #d43c28), color-stop(50%, #ad3224), color-stop(50%, #9c1500), color-stop(100%, #700d00));
+    background-image: -webkit-linear-gradient(top, #d43c28 0%, #ad3224 50%, #9c1500 50%, #700d00 100%);
+    background-image: -moz-linear-gradient(top, #d43c28 0%, #ad3224 50%, #9c1500 50%, #700d00 100%);
+    background-image: -ms-linear-gradient(top, #d43c28 0%, #ad3224 50%, #9c1500 50%, #700d00 100%);
+    background-image: -o-linear-gradient(top, #d43c28 0%, #ad3224 50%, #9c1500 50%, #700d00 100%);
+    background-image: linear-gradient(top, #d43c28 0%, #ad3224 50%, #9c1500 50%, #700d00 100%);
+    -webkit-box-shadow: inset 0px 0px 0px 1px rgba(255, 115, 100, 0.4);
+    box-shadow: inset 0px 0px 0px 1px rgba(255, 115, 100, 0.4);
+}

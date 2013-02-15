@@ -1,14 +1,16 @@
 define([
+	
 	'dx-alias/shim',
-	'./util/parser',
-	'app/view/views',
+	'dx-ui/util/parser',
+	'dx-ui/view/views',
 	'dojo/request',
 	'./model/Item',
 	'dx-mvc/stores/Store',
 	'dojo/text!dx-mvc/tests/groceries.json',
-	'app/view/Item',
-	'app/view/List',
-	'app/ui/Button'
+	'dx-ui/view/Item',
+	'dx-ui/view/List',
+	'dx-ui/ui/Button'
+	
 ], function(shim, parser, views, request, ItemModel, Store, groceriesData){
 	
 	console.log('LIST MAIN');
