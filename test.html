@@ -7,6 +7,7 @@
 		dojoConfig = {
 			async:1,
 			isDebug:1,
+			customBase:true,
 			packages:[
 				{name:'app', location:'../list/app'}
 			]
@@ -29,6 +30,7 @@
 	<div data-view='dx-ui/view/List' id='list'>
 	</div>
 	<script>
+		// store and data are in app/main
 		require(['app/main']);
 	</script>
 </body>
