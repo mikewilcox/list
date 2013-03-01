@@ -3,6 +3,16 @@
 <head>
     <title>The List</title>
 	<link href='./resources/app.css' rel='stylesheet' />
+	<style>
+		label{
+			display: block;
+		}
+		label span{
+			display: inline-block;
+			width: 120px;
+			font-size: 0.8em;
+		}
+	</style>
 	<script>
 		dojoConfig = {
 			async:1,
@@ -29,6 +39,19 @@
 	</div>
 	<div data-view='dx-ui/view/List' id='list'>
 	</div>
+	<form id='formNode' data-view='dx-mvc/form/Form'>
+		<label><span>Label:</span><input name='label' /></label>
+		<label><span>Description:</span><input id='n1' name='description' /></label>
+		<label><span>Location:</span><input id='n2' name='location' /></label>
+		<label><span>Category:</span><input name='category' /></label>
+		
+		
+		<label><span>Show Description:</span><input name='myRadios' type='radio' value='showDesc'/></label>
+		<label><span>Hide Description:</span><input name='myRadios' type='radio' value='hideDesc'/></label>
+		
+		<label><span>Enable Label:</span><input name='labelRadios' type='radio' value='enableLabel'/></label>
+		<label><span>Disable Label:</span><input name='labelRadios' type='radio' value='disableLabel'/></label>
+	</form>
 	<script>
 		// store and data are in app/main
 		require(['app/main']);

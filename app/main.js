@@ -9,7 +9,8 @@ define([
 	'dojo/text!dx-mvc/tests/groceries.json',
 	'dx-ui/view/Item',
 	'dx-ui/view/List',
-	'dx-ui/ui/Button'
+	'dx-ui/ui/Button',
+	'dx-mvc/form/Form'
 	
 ], function(shim, parser, views, request, ItemModel, Store, groceriesData){
 	
