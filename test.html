@@ -12,6 +12,11 @@
 			width: 120px;
 			font-size: 0.8em;
 		}
+		#formNode{
+			position: absolute;
+			top:55px;
+			left: 250px;
+		}
 	</style>
 	<script>
 		dojoConfig = {
@@ -51,7 +56,10 @@
 		
 		<label><span>Enable Label:</span><input name='labelRadios' type='radio' value='enableLabel'/></label>
 		<label><span>Disable Label:</span><input name='labelRadios' type='radio' value='disableLabel'/></label>
+		
 	</form>
+	<div data-view='dx-ui/ui/Button' id='btnFormNew'>New</div>
+		<div data-view='dx-ui/ui/Button' id='btnFormSave'>Save</div>
 	<script>
 		// store and data are in app/main
 		require(['app/main']);

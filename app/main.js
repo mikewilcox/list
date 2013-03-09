@@ -25,8 +25,24 @@ define([
 		data:data
 	});
 	
+	var newModel;
+	var form = views.get('formNode');
+	views.get('btnFormNew').on('click', function(){
+		newModel = store.createModel();
+		form.setModel(newModel);
+	});
+	views.get('btnFormSave').on('click', function(){
+		store.put(newModel);
+	});
+	
 	var list = views.get('list');
 	list.setStore(store);
+	
+	list.on('row-click', function(e){
+		console.log('main.click', e);
+		
+		form.setModel(e.child.model);
+	});
 	
 	views.get('btnCat').on('click', function(){
 		console.log('CAT');
